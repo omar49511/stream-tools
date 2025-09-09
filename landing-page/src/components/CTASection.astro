@@ -1,0 +1,56 @@
+---
+// src/components/CTASection.astro
+import Button from "../components/ui/Button.astro";
+import Card from "../components/ui/Card.astro";
+---
+
+<section class="py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <Card className="p-12 text-center bg-gradient-subtle border-primary/20 shadow-red/20 shadow-2xl">
+      <div class="mb-8">
+        <h2 class="text-4xl font-bold mb-6">
+          🚀 <span class="text-primary">¿Te interesa?</span>
+        </h2>
+        <p class="text-xl text-muted-foreground leading-relaxed mb-8">
+          Si la idea te late, aunque no estés 100% seguro de cómo ayudar, 
+          responde con unas palabras y cuéntanos qué se te da bien o qué te gustaría hacer.
+        </p>
+      </div>
+
+      <div class="bg-muted/30 rounded-lg p-6 mb-8 border border-primary/10">
+        <h3 class="text-lg font-semibold mb-4 text-primary">Próximos pasos:</h3>
+        <div class="space-y-3 text-muted-foreground text-left">
+          <div class="flex items-start gap-3">
+            <span class="text-primary">1.</span>
+            <span>Comparte tu interés y habilidades en el servidor</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary">2.</span>
+            <span>Haremos una primera reunión breve para conocernos</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-primary">3.</span>
+            <span>Alineamos ideas y empezamos con el primer widget</span>
+          </div>
+        </div>
+      </div>
+
+      <Button variant="cta" size="lg" className="px-12 py-4 text-lg mb-6">
+        ¡Quiero Participar! ✨
+      </Button>
+
+      <p class="text-muted-foreground">
+        El chiste es pasarla bien, aprender unos de otros y hacer algo que 
+        <span class="text-primary font-medium"> N.avy</span> y todos nosotros disfrutemos.
+      </p>
+    </Card>
+
+    {/* Final message */}
+    <div class="text-center mt-12">
+      <p class="text-2xl font-medium">
+        ¡Espero que se animen! 
+        <span class="text-primary"> ✨</span>
+      </p>
+    </div>
+  </div>
+</section>

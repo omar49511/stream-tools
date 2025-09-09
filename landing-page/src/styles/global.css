@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* Variables CSS crudas (hsl, tamaños, sombras, etc.) */
+:root {
+  --background: 0 0% 8%;
+  --foreground: 0 0% 95%;
+
+  --card: 0 0% 12%;
+  --card-foreground: 0 0% 95%;
+
+  --popover: 0 0% 12%;
+  --popover-foreground: 0 0% 95%;
+
+  --primary: 0 84% 60%;
+  --primary-foreground: 0 0% 100%;
+  --primary-glow: 0 84% 70%;
+
+  --secondary: 0 0% 18%;
+  --secondary-foreground: 0 0% 95%;
+
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 65%;
+
+  --accent: 0 84% 60%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 0 0% 20%;
+  --input: 0 0% 15%;
+  --ring: 0 84% 60%;
+
+  --radius: 0.75rem;
+
+  /* Custom tokens */
+  --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 70%));
+  --gradient-subtle: linear-gradient(180deg, hsl(0 0% 12%), hsl(0 0% 8%));
+  --shadow-red: 0 10px 30px -10px hsl(0 84% 60% / 0.3);
+  --shadow-glow: 0 0 40px hsl(0 84% 70% / 0.2);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Text sizes */
+  --text-hero: clamp(2.5rem, 8vw, 4rem);
+  --text-subtitle: clamp(1.125rem, 3vw, 1.5rem);
+}
+
+/* Design tokens de Tailwind v4 */
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-glow: hsl(var(--primary-glow));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --radius: var(--radius);
+
+  --shadow-red: var(--shadow-red);
+  --shadow-glow: var(--shadow-glow);
+
+  --gradient-primary: var(--gradient-primary);
+  --gradient-subtle: var(--gradient-subtle);
+
+  --text-hero: var(--text-hero);
+  --text-subtitle: var(--text-subtitle);
+}
+
+/* Resets y base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  @apply border-border;
+}

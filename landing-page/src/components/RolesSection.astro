@@ -1,0 +1,78 @@
+---
+// src/components/RolesSection.astro
+import Card from "../components/ui/Card.astro";
+
+const roles = [
+  {
+    title: "🎨 Artistas & Diseñadores",
+    description: "Yo sé dibujar y diseñar.",
+    detail: "Crea la estética visual de los widgets y herramientas."
+  },
+  {
+    title: "🔍 Testers & QA",
+    description: "Me gusta testear y encontrar fallos.",
+    detail: "Encuentra bugs y mejora la experiencia de usuario."
+  },
+  {
+    title: "💻 Programadores",
+    description: "Sé un poco de programación y quiero practicar.",
+    detail: "Desarrolla la funcionalidad y aprende nuevas tecnologías."
+  },
+  {
+    title: "💡 Creativos",
+    description: "Tengo ideas locas y buen gusto para los colores.",
+    detail: "Aporta conceptos únicos y decisiones de diseño."
+  },
+  {
+    title: "📋 Organizadores",
+    description: "Puedo ayudar a organizar las ideas.",
+    detail: "Coordina el proyecto y mantiene todo en orden."
+  },
+  {
+    title: "🎉 Supporters",
+    description: "Solo quiero ver cómo avanzan y apoyar.",
+    detail: "Tu apoyo y feedback es igual de valioso."
+  }
+];
+---
+
+<section class="py-20 px-6 bg-gradient-subtle">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-6">
+        ✨ <span class="text-primary">¿Cuál es tu superpoder?</span>
+      </h2>
+      <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+        Cada persona tiene algo único que aportar. Encuentra tu lugar en el equipo.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {roles.map((role, index) => (
+        <Card 
+          key={index} 
+          className="p-6 bg-card/50 border-primary/10 hover:border-primary/30 hover:shadow-glow transition-smooth group"
+        >
+          <h3 class="text-lg font-semibold mb-3 group-hover:text-primary transition-smooth">
+            {role.title}
+          </h3>
+          <blockquote class="text-primary/80 italic mb-3 border-l-2 border-primary/30 pl-4">
+            "{role.description}"
+          </blockquote>
+          <p class="text-muted-foreground text-sm">
+            {role.detail}
+          </p>
+        </Card>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <p class="text-muted-foreground mb-2">
+        ¿No encajas en ninguna categoría?
+      </p>
+      <p class="text-primary font-medium">
+        ¡No hay problema! Cuéntanos qué se te da bien o qué te gustaría hacer.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+// src/components/ui/Card.astro (versión con slots)
+
+const { className = "", ...props } = Astro.props;
+---
+
+<div class={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`} {...props}>
+  {Astro.slots.header && (
+    <div class="flex flex-col space-y-1.5 p-6">
+      <slot name="header" />
+    </div>
+  )}
+  
+  {Astro.slots.content && (
+    <div class="p-6 pt-0">
+      <slot name="content" />
+    </div>
+  )}
+  
+  {Astro.slots.footer && (
+    <div class="flex items-center p-6 pt-0">
+      <slot name="footer" />
+    </div>
+  )}
+  
+  {/* Contenido por defecto */}
+  <slot />
+</div>

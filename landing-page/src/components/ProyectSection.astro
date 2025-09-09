@@ -1,0 +1,83 @@
+---
+// src/components/ProjectSection.astro
+import Card from "../components/ui/Card.astro";
+---
+
+<section class="py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    {/* Header */}
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-6">
+        🎯 <span class="text-primary">La Idea</span>
+      </h2>
+      <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+        Crear juntos widgets y herramientas únicas para el stream de N.avy. 
+        Unamos nuestros talentos para construir algo increíble desde cero.
+      </p>
+    </div>
+
+    {/* Main Content */}
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+      <div>
+        <h3 class="text-2xl font-semibold mb-6 text-primary">¿De qué se trata?</h3>
+        <div class="space-y-4 text-muted-foreground leading-relaxed">
+          <p>
+            He visto el talento que hay en este server: hay artistas, gente con ideas locas, 
+            otros que saben un poco de programación y otros que quizá no saben pero tienen curiosidad.
+          </p>
+          <p>
+            ¿Qué tal si unimos todas esas habilidades para crear algo genial, desde cero y como equipo?
+          </p>
+          <p class="text-foreground font-medium">
+            El objetivo principal es aprender, divertirnos y crear algo del qué podamos sentirnos 
+            orgullosos juntos. No es un trabajo ni una obligación.
+          </p>
+        </div>
+      </div>
+
+      <Card className="p-8 bg-gradient-subtle border-primary/20 shadow-red/20 shadow-2xl">
+        <div class="text-center">
+          <div class="text-6xl mb-4">🎮</div>
+          <h4 class="text-xl font-semibold mb-3 text-primary">Pasatiempo Creativo</h4>
+          <p class="text-muted-foreground">
+            Trabajaremos a nuestro propio ritmo, sin presiones. 
+            Solo pura creatividad y ganas de aprender juntos.
+          </p>
+        </div>
+      </Card>
+    </div>
+
+    {/* How it works */}
+    <div class="mb-20">
+      <h3 class="text-3xl font-bold text-center mb-12">
+        🤔 <span class="text-primary">¿Cómo funcionaría?</span>
+      </h3>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <Card className="p-6 text-center bg-gradient-subtle border-primary/10 hover:border-primary/30 transition-smooth hover:shadow-glow">
+          <div class="text-4xl mb-4">🎨</div>
+          <h4 class="text-lg font-semibold mb-3">No necesitas ser experto</h4>
+          <p class="text-muted-foreground text-sm">
+            Lo más importante es tener ganas de colaborar. No es necesario saber programar.
+          </p>
+        </Card>
+
+        <Card className="p-6 text-center bg-gradient-subtle border-primary/10 hover:border-primary/30 transition-smooth hover:shadow-glow">
+          <div class="text-4xl mb-4">👥</div>
+          <h4 class="text-lg font-semibold mb-3">Todos tienen un rol</h4>
+          <p class="text-muted-foreground text-sm">
+            Artistas, testers, creativos, organizadores. Tu opinión será clave.
+          </p>
+        </Card>
+
+        <Card className="p-6 text-center bg-gradient-subtle border-primary/10 hover:border-primary/30 transition-smooth hover:shadow-glow">
+          <div class="text-4xl mb-4">🚀</div>
+          <h4 class="text-lg font-semibold mb-3">Proyectos pequeños</h4>
+          <p class="text-muted-foreground text-sm">
+            Empezaremos con algo divertido como alertas personalizadas para el canal.
+          </p>
+        </Card>
+      </div>
+    </div>
+  </div>
+</section>
