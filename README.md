@@ -9,7 +9,7 @@
 
 Un proyecto colaborativo y open-source para crear widgets personalizados, únicos y divertidos para el stream de [N.avy](https://twitch.tv/navyri). Desarrollado con 💖 por su comunidad.
 
-🔗 **Landing Page del Proyecto:** [¡Próximamente!]() <!-- Link a tu GitHub Pages cuando la landing esté lista -->
+🔗 **Landing Page del Proyecto:** [¡Landing Page!](https://omar49511.github.io/stream-tools/) <!-- Link a tu GitHub Pages cuando la landing esté lista -->
 
 ---
 
